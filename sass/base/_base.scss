@@ -1,0 +1,22 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+/* 1rem = 10px = 62.5% de 16px*/
+
+/* default do browser = 16px */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* como o * é inherit então todos serão box-sizing: border-box */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

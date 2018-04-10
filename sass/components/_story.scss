@@ -1,0 +1,75 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: rgba($color-white, .6);
+    border-radius: .3rem;
+    padding: 6rem;
+    /* 6 + 3 do transform */
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    -webkit-transform: skewX(-12deg);
+    transform: skewX(-12deg);
+    /* pega todos os elementos filhos de story e aplica o skew ao contrário */
+    &>* {
+        /* funciona com os textos mas não funciona com a img pq ela já tem um transform */
+        -webkit-transform: skewX(12deg);
+        transform: skewX(12deg);
+    }
+    &__shape {
+        position: relative;
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        /* faz o texto ficar ao redor do círculo */
+        /* para usar o circle() obrigatoriamente precisa setar a largura altura e float */
+        /* raio do círculo (7.5rem) at posição horizontal vertical (50% 50% = meio)*/
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+        /* faz o elemento realmente parecer um círculo */
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        /* como o elemento é float, não usar margin/padding para posicionar */
+        /* o skewX é do ângulo */
+        -webkit-transform: translateX(-3rem) skewX(12deg);
+        transform: translateX(-3rem) skewX(12deg);
+    }
+    &__img {
+        height: 100%;
+        -webkit-transform: translateX(-4rem) scale(1.4);
+        transform: translateX(-4rem) scale(1.4);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+    &__text {
+        -webkit-transform: skewX(12deg);
+        transform: skewX(12deg);
+    }
+    &__caption {
+        @include absCenter;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        text-align: center;
+        opacity: 0;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    &:hover &__caption {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    &:hover &__img {
+        -webkit-transform: translateX(-4rem) scale(1);
+        transform: translateX(-4rem) scale(1);
+        /* deixar a imagem mais escura e embaçada */
+        -webkit-filter: blur(.3rem) brightness(80%);
+        filter: blur(.3rem) brightness(80%);
+    }
+}

@@ -1,0 +1,83 @@
+/* Sempre colocar font-family no body */
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+    /* como o * é inherit então todos serão box-sizing: border-box */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+    /* Para arrumar o bug da animação */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+
+    &--main {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        /* Animation */
+        -webkit-animation-name: moveInLeft;
+        animation-name: moveInLeft;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        /* Pode dar um delay para a animação começar */
+        /* animation-delay: 3s; */
+        /* Número de vezes que a animation ocorre */
+        /* animation-iteration-count: 3; */
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        /* Em uma linha */
+        -webkit-animation: moveInRight 1s;
+        animation: moveInRight 1s;
+    }
+}
+
+.heading-secondary {
+    display: inline-block;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: -webkit-gradient(linear, left top, right top, from($color-primary-light), to($color-primary-dark));
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    /* a cor do gradiente fica no texto */
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+
+    &:hover {
+        /* "girar" */
+        -webkit-transform: skewY(2deg) skewX(15deg) scale(1.1);
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    }
+}
+
+.heading-tertiary {
+    font-size: $default-font-size;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,46 @@
+.header {
+    /* Deixa a imagem ocupar 95% da tela independente do device */
+    height: 95vh;
+    background-image: -webkit-gradient( linear,
+    left top, right bottom,
+    from(rgba($color-primary-light, 0.8)),
+    to(rgba($color-primary-dark, 0.8))),
+    url(../img/hero.jpg);
+    background-image: linear-gradient( to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+    url(../img/hero.jpg);
+    /* Deixa a imagem do tamanho da tela */
+    background-size: cover;
+    /* Independente do viewport, o topo da imagem sempre fica no top do viewport */
+    background-position: top;
+    /* Especificar os pontos que devem aparecer X Y em px, %, vh... */
+    /* Começa no topo esquerdo, topo direito, baixo esquerdo, baixo direito */
+    /* site: bennettfeely.com/clippy */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    /* Para a div logo-box de posição absolute */
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        /* Como a imagem possui um corte na parte de baixo, para parecer centralizada colocar top < 50% */
+        top: 40%;
+        left: 50%;
+        /* Joga 50% da altura para cima e e 50% da largura para esquerda */
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        /* Para centralizar o botão */
+        text-align: center;
+    }
+}

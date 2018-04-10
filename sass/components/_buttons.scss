@@ -1,0 +1,115 @@
+.btn {
+    /* &, significa button */
+    &,
+    &:visited,
+    &:link {
+        display: inline-block;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        border-radius: 10rem;
+        font-size: $default-font-size;
+        /* Estado inicial deve conter a transition */
+        -webkit-transition: all .2s;
+        transition: all .2s;
+        /* Para o after */
+        position: relative;
+
+        /* para o elemento <button> */
+        border: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        -webkit-transform: translateY(-.3rem);
+        transform: translateY(-.3rem);
+        /* X Y blur color */
+        -webkit-box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        &::after {
+            -webkit-transform: scaleX(1.4) scaleY(1.6);
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active,
+    &focus {
+        outline: none;
+        -webkit-transform: translateY(-.1rem);
+        transform: translateY(-.1rem);
+        -webkit-box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+        box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &--animated {
+        -webkit-animation: moveInBottom .5s ease-out .75s;
+        animation: moveInBottom .5s ease-out .75s;
+        /* Aplica a animação de 0% antes dela começar */
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+    }
+
+    &::after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        -webkit-transition: all .4s;
+        transition: all .4s;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited {
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary;
+        padding: .3rem;
+        font-size: $default-font-size;
+        -webkit-transform: all .2s;
+        transform: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        -webkit-box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
+        -webkit-transform: translateY(-.2rem);
+        transform: translateY(-.2rem);
+    }
+
+    &:active {
+        -webkit-box-shadow: 0 .5rem 2rem rgba($color-black, .15);
+        box-shadow: 0 .5rem 2rem rgba($color-black, .15);
+        -webkit-transform: translateY(0rem);
+        transform: translateY(0rem);
+    }
+}
