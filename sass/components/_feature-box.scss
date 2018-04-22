@@ -10,12 +10,13 @@
     transition: -webkit-transform .3s;
     transition: transform .3s;
     transition: transform .3s, -webkit-transform .3s;
-
+    @include respond(tab-port) {
+        padding: 2rem;
+    }
     &:hover {
         -webkit-transform: translateY(-1.5rem) scale(1.03);
         transform: translateY(-1.5rem) scale(1.03);
     }
-
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
@@ -25,5 +26,8 @@
         /* a cor do gradiente fica no texto */
         -webkit-background-clip: text;
         color: transparent;
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
     }
 }
