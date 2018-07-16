@@ -84,20 +84,25 @@
                 <div class="col-1-of-2">
                     <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
                     <p class="paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nemo minus rerum libero numquam vel iure qui cupiditate quibusdam sit, commodi, pariatur similique, consequuntur provident deserunt!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, nemo minus rerum libero numquam vel iure qui cupiditate
+                        quibusdam sit, commodi, pariatur similique, consequuntur provident deserunt!
                     </p>
                     <h3 class="heading-tertiary u-margin-bottom-small">Live adventures like you never have before</h3>
                     <p class="paragraph">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officia consequatur, quidem, alias in mollitia vel expedita facilis, est ut at deserunt harum fuga tempora vitae distinctio reprehenderit architecto ullam?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates officia consequatur, quidem, alias in mollitia vel expedita
+                        facilis, est ut at deserunt harum fuga tempora vitae distinctio reprehenderit architecto ullam?
                     </p>
                     <a href="#" class="btn-text">Learn more &rarr;</a>
                 </div>
                 <!-- IMGS -->
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                        <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                        <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
+                        <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
+                        <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
+                        <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px"
+                            src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
                     </div>
                 </div>
             </div>
@@ -300,8 +305,9 @@
                             I had the best week ever with my family
                         </h3>
                         <p>
-                            Lorem ipsum dolor sit amet, adipisicing elit. Hic similique debitis iure rerum? Illum aliquid suscipit quia in totam dolorem explicabo deserunt rem nemo non nihil incidunt cum dolores quidem, ea ullam recusandae fuga fugiat amet, nostrum repellendus.
-                            Similique, illo totam, doum ea provident!
+                            Lorem ipsum dolor sit amet, adipisicing elit. Hic similique debitis iure rerum? Illum aliquid suscipit quia in totam dolorem
+                            explicabo deserunt rem nemo non nihil incidunt cum dolores quidem, ea ullam recusandae fuga fugiat
+                            amet, nostrum repellendus. Similique, illo totam, doum ea provident!
                         </p>
                     </div>
                 </div>
@@ -322,8 +328,9 @@
                             WOW! My life os completely different now
                         </h3>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat earum, quibusdam vel sed rerum iure velit autem beatae sapiente nemo quas dolorem reprehenderit possimus at nulla nostrum sequi officiis error exercitationem, laborum odio. Blanditiis
-                            veniam, error, maiores ipsum ea cum.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat earum, quibusdam vel sed rerum iure velit autem beatae
+                            sapiente nemo quas dolorem reprehenderit possimus at nulla nostrum sequi officiis error exercitationem,
+                            laborum odio. Blanditiis veniam, error, maiores ipsum ea cum.
                         </p>
                     </div>
                 </div>
@@ -386,7 +393,10 @@
     <footer class="footer">
         <!-- LOGO IMG -->
         <div class="footer__logo-box">
-            <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+            <picture class="footer__logo">
+                <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" src="img/logo-green-2x.png" alt="Full logo">
+            </picture>
         </div>
         <!-- TEXT -->
         <div class="row">
@@ -417,8 +427,9 @@
                 <p class="footer__copyright">
                     Built my
                     <a href="#" class="footer__link">Eduardo Diniz</a> for an online course
-                    <a href="#" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. A credit to the
-                    original author, Jonas Schmedtmann, is of course highly appreciated!
+                    <a href="#" class="footer__link">Advanced CSS and Sass</a>. Copyright &copy; by Jonas Schmedtmann. You are 100% allowed to use this webpage
+                    for both personal and commercial use, but NOT to claim it as your own design. A credit to the original
+                    author, Jonas Schmedtmann, is of course highly appreciated!
                 </p>
             </div>
         </div>
@@ -437,8 +448,10 @@
                 <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
                 <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
                 <p class="popup__text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam necessitatibus perferendis molestiae provident ea dolor laboriosam est nihil quisquam eius aliquid, vitae consequatur illo delectus quo laborum ut impedit non. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. Repellendus, aut ducimus nulla libero totam ea aperiam eos ipsam nostrum omnis eaque, maiores provident quia ullam? Rerum aut assumenda alias reiciendis.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam necessitatibus perferendis molestiae provident ea dolor
+                    laboriosam est nihil quisquam eius aliquid, vitae consequatur illo delectus quo laborum ut impedit non.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, aut ducimus nulla libero totam
+                    ea aperiam eos ipsam nostrum omnis eaque, maiores provident quia ullam? Rerum aut assumenda alias reiciendis.
                 </p>
                 <!-- BTN -->
                 <a href="#" class="btn btn--green">Book now</a>
